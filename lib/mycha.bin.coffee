@@ -31,8 +31,10 @@ module.exports = (mycha_args) ->
 
   command = argv._[0]
   options = argv
-  options.watch = command is 'watch'
+  options.mocha_arguments = options.mocha || {}
+  options.mocha_arguments.reporter = options.reporter
+  options.mocha_arguments.watch    = command is 'watch'
 
   Mycha = require './mycha'
-  mycha = new Mycha process.cwd(), options
+  mycha = new Mycha options
   mycha.run()

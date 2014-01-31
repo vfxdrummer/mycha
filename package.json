@@ -22,7 +22,7 @@
     "url": "git://github.com/Originate/mycha.git"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script --reporter spec"
+    "test": "mocha --compilers coffee:coffee-script --reporter spec --recursive"
   },
   "author": "Alex David"
 }
